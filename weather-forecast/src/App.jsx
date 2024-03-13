@@ -28,11 +28,6 @@ function App() {
     const newCity = document.getElementById('locationInput').value;
     setCity(newCity);
   };
-  var temp=0;
-  if(weatherData.main && weatherData.main.temp){
-    temp=weatherData.main.temp-273.15
-
-  }
 
   return (
     <>
@@ -44,7 +39,7 @@ function App() {
               <h2>Weather</h2>
               {weatherData ? (
               <>
-                <p>Temperature: {temp.toFixed(2)} C</p>
+                <p>Temperature: {(weatherData.main.temp - 273.15).toFixed(2)} C</p>
                 <p>Description: {weatherData.weather && weatherData.weather[0].description}</p>
               </>
               ) : (
