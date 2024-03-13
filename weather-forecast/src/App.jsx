@@ -47,6 +47,24 @@ function App() {
           )}
         </div>
       </div>
+      <div className="Container2">
+        <h3>Near By Cities</h3>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+      </div>
     </>
   );
 
