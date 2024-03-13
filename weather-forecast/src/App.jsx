@@ -8,16 +8,14 @@ function App() {
 
   return (
     <>
-      <div id='root'>
-        <div className="header">
-          <h1 className='title'>Weather Forecaster</h1>
-          <input type="text"id="search" className='searchbar' />
-          <input type="submit" value="submit" className='bar' />
-        </div>
-        
-
-        <div className="item-container">
-            <p>hi</p>
+      <div class="Container">
+        <h1>Weather App</h1>
+        <input type="text" id="locationInput" placeholder="Enter city name"/>
+        <button id="searchButton">Search</button>
+        <div class="weather-info">
+            <h2>Weather</h2>
+            <p>Temperature</p>
+            <p>Description</p>
         </div>
       </div>
     </>
