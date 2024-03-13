@@ -1,13 +1,13 @@
 body {
 font-family: 'Courier New', Courier, monospace;
-background-color: rgb(200, 184, 184);
+background: linear-gradient(129deg, rgb(34, 181, 254) 5.02%, rgb(255, 186, 214) 84.47%);
 }
 
 .Container {
   max-width: 400px;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 30%;
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 40px;
@@ -15,6 +15,22 @@ background-color: rgb(200, 184, 184);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
+.Container2 {
+  max-width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(9, 8, 8, 0.5);
+  border-radius: 10px;
+  background-color: rgb(150, 144, 193);
+  overflow-y: scroll;
+  height: 400px;
+}
+
 
 h1 {
 font-size: 25px;
@@ -39,4 +55,13 @@ cursor: pointer;
 
 .weather-info {
 margin-top: 20px;
+}
+
+.main-details-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  min-width: 350px;
+  padding: 10px;
+  margin-bottom: 10px;
 }

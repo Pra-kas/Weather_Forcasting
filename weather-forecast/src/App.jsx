@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './App.css'
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
@@ -32,25 +33,37 @@ function App() {
     <>
       <div className="Container">
         <h1>Weather App</h1>
-        <input
-          type="text"
-          id="locationInput"
-          placeholder="Enter city name"
-        />
-        <button id="searchButton" onClick={handleSearch}>
-          Search
-        </button>
+        <input type="text" id="locationInput" placeholder="Enter city name" />
+        <button id="searchButton" onClick={handleSearch}>Search </button>
         <div className="weather-info">
-          <h2>Weather</h2>
-          {weatherData ? (
-            <>
-              <p>Temperature: {weatherData.main && weatherData.main.temp} K</p>
-              <p>Description: {weatherData.weather && weatherData.weather[0].description}</p>
-            </>
-          ) : (
+              <h2>Weather</h2>
+              {weatherData ? (
+              <>
+                <p>Temperature: {(weatherData.main.temp - 273.15).toFixed(2)} C</p>
+                <p>Description: {weatherData.weather && weatherData.weather[0].description}</p>
+              </>
+              ) : (
             <p>Please enter a city name and search.</p>
           )}
         </div>
+      </div>
+      <div className="Container2">
+        <h3>Near By Cities</h3>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
+        <div class="main-details-container" >Chennai</div>
       </div>
     </>
   );
