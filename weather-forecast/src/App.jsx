@@ -21,14 +21,11 @@ function App() {
       fetchWeather();
     }
   }, [city]);
-  
-
   const handleSearch = async (event) => {
     event.preventDefault();
     const newCity = document.getElementById('locationInput').value;
     setCity(newCity);
   };
-
   return (
     <>
       <div className="Container">
