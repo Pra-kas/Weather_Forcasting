@@ -39,13 +39,9 @@ function App() {
           <h2>Weather</h2>
           {weatherData ? (
             <>
-            <p>Temperature: {weatherData.searchedCityTemperature ? ((weatherData.searchedCityTemperature - 273.15).toFixed(2)) : 'N/A'} C</p>
-            <p>Description: {weatherData && weatherData.searchedCityDescription ? weatherData.searchedCityDescription : 'N/A'}</p>
-
-
-          </>
-          
-          
+              <p>Temperature: {weatherData.searchedCityTemperature ? ((weatherData.searchedCityTemperature - 273.15).toFixed(2)) : 'N/A'} C</p>
+              <p>Description: {weatherData && weatherData.searchedCityDescription ? weatherData.searchedCityDescription : 'N/A'}</p>
+            </>
           
           ) : (
             <p>Please enter a city name and search.</p>
