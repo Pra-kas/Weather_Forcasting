@@ -50,13 +50,13 @@ app.get('/weather', async (req, res) => {
     const { temperature: searchedCityTemperature, description: searchedCityDescription } = await fetchWeatherForCity(city); 
 
     const cities = await City.find();
-    const promises = cities.map(async (city) => {
+    const citydata = cities.map(async (city) => {
       const { temperature, description } = await fetchWeatherForCity(city.name); 
       await City.findByIdAndUpdate(city._id, { temperature, description });
       return { name: city.name, temperature, description };
     });
 
-    const weatherData = await Promise.all(promises);
+    const weatherData = await Promise.all(citydata);
     res.json({ searchedCityTemperature, searchedCityDescription, cities: weatherData }); 
   } catch (error) {
     console.error('Error fetching weather data:', error);
